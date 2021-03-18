@@ -12,9 +12,15 @@ const server =
       res.write('<html> <head> <title> Served </title> </head>')
       res.write('<body>')
       res.write('Content \n')
-      res.write('More content \n')
-      res.write('Hello World')    
+      res.write('<table style="width:50%">')
+      res.write('<tr><th>Location</th><th>No Of Hours</th> <th>Amount Of Money To Spend</th></tr>')
+      res.write('<tr><td>Delhi</td><td>48hrs</td><td>$1000</td></tr>')
+      res.write('<tr><td>Agra</td><td>24hrs</td><td>$500</td></tr>')
+      res.write('<tr><td>Goa</td><td>24hrs</td><td>$700</td></tr>')
+      res.write('<tr><td>Munnar</td><td>12hrs</td><td>$300</td></tr>')
+      res.write('</table>')
       res.end('</body></html>')
+
       //Close the response
     }                           
 )
