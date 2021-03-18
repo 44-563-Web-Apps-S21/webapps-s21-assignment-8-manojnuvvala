@@ -21,7 +21,8 @@ const server =
                     "Life is what happens when you're busy making other plans. -John Lennon",
                     "Spread love everywhere you go. Let no one ever come to you without leaving happier. -Mother Teresa",
                     "The future belongs to those who believe in the beauty of their dreams. -Eleanor Roosevelt.",
-                    "Whoever is happy will make others happy too. -Anne Frank", "Don't judge each day by the harvest you reap but by the seeds that you plant. -Robert Louis Stevenson"
+                    "Whoever is happy will make others happy too. -Anne Frank", 
+                    "Don't judge each day by the harvest you reap but by the seeds that you plant. -Robert Louis Stevenson"
                 ]
                 let randomIndex = Math.floor(Math.random() * advices.length)
                 // Process the queries here
