@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Demo</title>
+    <style>
+        button {
+            padding: 16px;
+            width: 150px;
+            border: none;
+            background: #be6115;
+            color: white;
+            font-weight: 900;
+        }
+
+        #quote {
+            border: 2px solid rgb(224, 116, 116);
+            align-items: left;
+            font-weight: 600;
+            font-style: italic;
+            text-align: left;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+
+        }
+
+        .intro {
+            margin: auto;
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <h1>Quote</h1>
+        <small>Click on the button to get new quote!!!</small>
+        <div>
+            <button onclick="getAdvice()">Get an quote</button>
+        </div>
+    </div>
+
+    <div id="quote"></div>
+    <script>
+        const getAdvice = () => {
+            fetch('http://127.0.0.1:3001').then(
+                (res) => {
+                    console.log(res)
+                    return res.text()
+                }
+            ).then(data => {
+                // document.getElementById("quote").style.display = block
+                console.log(data)
+                document.getElementById("quote").innerHTML = data
+            }).catch(err => {
+                document.getElementById("quote").innerHTML = err
+            })
+        }
+    </script>
+</body>
+</html>
